@@ -8,6 +8,37 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - check_balance
+  - check_logs
+  - ask_help
+  - ask_charge
+  - transfer_money
+  - ask_transfer_details
+
+entities:
+  - amount_to_transfer
+  - recipient_name
+  - recipient_upi
+  - random_object
+
+slots:
+  amount_to_transfer:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: amount_to_transfer
+
+  recipient_name:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: recipient_name
+
+  recipient_upi:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: recipient_upi
 
 responses:
   utter_greet:
@@ -50,6 +81,9 @@ responses:
   - text: "I am a bot, powered by Rasa."
   - text: "I am a happy bot designed to help you."
   - text: "I trained hard ⚒️⚒️ so that I can make your work easy 😘"
+
+  utter_transfer_details:
+  - text: "You want to transfer {amount_to_transfer} rupees to {recipient_name}'s upi id -> {recipient_upi}"
 
 session_config:
   session_expiration_time: 60

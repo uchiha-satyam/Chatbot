@@ -64,11 +64,13 @@ nlu:
     - no
     - n
     - never
-    - I don't think so
+    - i don't think so
     - don't like that
     - no way
     - not really
     - naa
+    - nahi bhai
+    - bilkul nhi
     - not that
     - it was something else
     - nah
@@ -81,10 +83,10 @@ nlu:
     - amazing
     - feeling like a king
     - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
+    - i am feeling very good
+    - i am great
+    - i am amazing
+    - i am going to save the world
     - super stoked
     - extremely good
     - so so perfect
@@ -96,15 +98,21 @@ nlu:
     - life's good
     - life is going the way it should be
     - dope
+    - accha tha
+    - badhiya
+    - oo changa jii changa
+    - balle balle
+    - sukhi
+    - paryapt
 
 - intent: mood_unhappy
   examples: |
     - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
+    - i am sad
+    - i don't feel very well
+    - i am disappointed
     - super sad
-    - I'm so sad
+    - i'm so sad
     - sad
     - very sad
     - unhappy
@@ -122,14 +130,207 @@ nlu:
     - lazy
     - tired
     - tiresome
+    - dukhi
+    - bura lag raha
+    - accha nhi tha
+    - kharab
+    - ganda
 
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - am i talking to a bot?
+    - am i talking to a human?
     - who are you?
     - who am i talking to?
     - bot?
     - human?
+    - tu hai kon be
+    - robot hai kya?
+
+- intent: check_balance
+  examples: |
+    - how much do i have?
+    - how much money do i have?
+    - how much money do i have in my account?
+    - what is my account balance?
+    - how much money is left?
+    - balance?
+    - am i rich?
+    - am i poor?
+    - can i make my friend rich?
+    - how much can i spend?
+    - what's my budget?
+    - check my balance
+    - show my balance
+    - how much can i send to [himanshu](recipient_name)?
+    - can i transfer money to [praphull](recipient_name)?
+    - can i pay [prashant](recipient_name)?
+    - can i make [sonam](recipient_name) rich?
+    - how much can i spend on [cars](random_object)?
+    - how much [watches](random_object) can i buy?
+    - can i afford a [rolex](random_object)?
+    - can i gift my friend a [russian](random_object)?
+    - can i gift [himanshu](recipient_name) a [russian](random_object)?
+    - can i gift [praphull](recipient_name)?
+    - how many [bikes](random_object) can i afford?
+
+- intent: check_logs
+  examples: |
+    - transfer logs
+    - logs
+    - show logs
+    - show me my transaction history
+    - show me my expenditure
+    - how much money have i spent?
+    - show me my passbook
+    - show me my recent activity
+    - my account activities
+    - where have i spent my wealth?
+    - my expenses
+    - show my expenses
+    - to whom have i transfered money?
+    - whom have i made rich?
+    - what has been the recent activity in my account?
+
+- intent: ask_help
+  examples: |
+    - help
+    - what can you do?
+    - what can i ask you?
+    - what do you do?
+    - what can you help me with?
+    - can you help me?
+    - help me
+    - help, what do you do
+    - how do i use this
+    - how can you help me
+    - What are the things that you can do?
+    - What else can you help me with?
+    - can you do anything else?
+    - can you help me?
+    - come back
+    - cool! can i do something else here?
+    - hello what can you do for me
+    - help please
+    - help pls
+    - help?
+    - i am stuck 
+    - i am confused
+    - what are you capable of?
+    - assist me
+    - tell me your capabilities.
+
+- intent: ask_charge
+  examples: |
+    - will i be charged for transferring money
+    - do transfers cost something?
+    - is there a transfer charge?
+    - is there a charge
+    - will i be charged for a transaction?
+    - is there a transfer fee
+    - how much is the transfer fee
+    - what's the cost of transferring money
+    - what am i charged upon money transfer
+    - are you gonna bill me for this exchange
+    - what's the transfer price for this account
+    - okay but how much to move this money?
+    - how much is the fee to shift my money around
+    - if i send money to someone will i be charged extra for that?
+    - is there a charge when i send money to someone
+    - what is the fee for sending money to someone else
+    - i sent money to my friend, did it charged extra for that
+    - what is the percentage fee for transactions to another person
+    - are there any transaction fees or charges i should know about?
+    - tell me about transfer fees
+
+- intent: transfer_money
+  examples: |
+    - i want to transfer money
+    - i want to pay someone
+    - can i pay someone
+    - i need to transfer money to a friend
+    - pay my friend
+    - transfer money
+    - need to transfer money
+    - i want to transfer money please
+    - i mean i want to transfer money
+    - i need to send money to my kid
+    - hi i would like to send money
+    - i need to transfer money to my co-worker who paid for lunch.
+    - i need to transfer money
+    - i need to pay a friend.
+    - can i transfer money to a friend?
+    - i want to pay [himanshu](recipient_name)
+    - i want to transfer rs. [100](amount_to_transfer) to [himanshu](recipient_name).
+    - can i transfer money to [praphull](recipient_name)
+    - can i transfer money to my [girlfriend](recipient_name)
+    - i want to pay [jatav](recipient_name)
+    - i want to transfer rs. [100](amount_to_transfer) to [prshant](recipient_name)
+    - i want to pay [satyam](recipient_name)
+    - pay [nikita](recipient_name) rs. [40](amount_to_transfer) please
+    - transfer rs. [60](amount_to_transfer) to [vedha](recipient_name)
+    - pay [nikita](recipient_name)
+    - pay [vedha](recipient_name) please
+    - can i transfer money to [priyansh](recipient_name)?
+    - pay [satyam](recipient_name) [60](amount_to_transfer) rs.
+    - pay [praphull](recipient_name) rs. [60](amount_to_transfer)
+    - transfer rs. [60](amount_to_transfer) to [prashant](recipient_name)
+    - pay [satyam](recipient_name) rs [50000](amount_to_transfer).
+    - pay rs. [500000](amount_to_transfer) to [vedha](recipient_name)
+    - ok pay [prashant](recipient_name)
+    - pay [himanshu](recipient_name)
+    - i want to transfer rs. [100](amount_to_transfer) to my [daughter](recipient_name)
+    - i need to transfer money to my grandma [dommeti](recipient_name).
+    - i want to transfer money to [akshat](recipient_name)
+    - i need to make an urgent transfer to [himanshu](recipient_name), can you do it?
+    - ahh, okay so i want to make a transfer to [navvay](recipient_name).
+    - i need to transfer money to [prakhar](recipient_name), my son
+    - send rs [50](amount_to_transfer) to [dommeti](recipient_name)
+    - hi i like to send money to [sanjana priya](recipient_name)
+    - please transfer [50](amount_to_transfer) Rupees to [anand singh](recipient_name)
+    - i would like to transfer money to [vaibhav joshi](recipient_name)
+    - i would like to transfer [50](amount_to_transfer) rupees to [gupta](recipient_name)
+    - i want to pay [himanshu@oksbi](recipient_upi)
+    - i want to transfer rs. [100](amount_to_transfer) to [himanshu@oksbi](recipient_upi).
+    - can i transfer money to [praphull@pnb](recipient_upi)
+    - i want to pay [jatav@gpay](recipient_upi)
+    - i want to transfer rs. [100](amount_to_transfer) to [prashant@ybl](recipient_upi)
+    - i want to pay [satyam@hdfc](recipient_upi)
+    - pay [nikita@icici](recipient_upi) rs. [40](amount_to_transfer) please
+    - transfer rs. [60](amount_to_transfer) to [vedha@gpay](recipient_upi)
+    - pay [nikita@icici](recipient_upi)
+    - pay [vedha@gpay](recipient_upi) please
+    - can i transfer money to [priyansh@nokia](recipient_upi)?
+    - pay [satyam@hdfc](recipient_upi) [60](amount_to_transfer) rs.
+    - pay [praphull@pnb](recipient_upi) rs. [60](amount_to_transfer)
+    - transfer rs. [60](amount_to_transfer) to [prashant@ybl](recipient_upi)
+    - pay [satyam@hdfc](recipient_upi) rs [50000](amount_to_transfer).
+    - pay rs. [500000](amount_to_transfer) to [vedha@gpay](recipient_upi)
+    - ok pay [prashant@ybl](recipient_upi)
+    - pay [himanshu@oksbi](recipient_upi)
+    - i want to transfer money to [akshat@bank](recipient_upi)
+    - i need to make an urgent transfer to [himanshu@oksbi](recipient_upi), can you do it?
+    - ahh, okay so i want to make a transfer to [navvay@cpay](recipient_upi).
+    - i need to transfer money to [prakhar@api](recipient_upi), my son
+    - send rs [50](amount_to_transfer) to [dommeti@yaml](recipient_upi)
+    - hi i like to send money to [4492939@cmlam](recipient_upi)
+    - please transfer [50](amount_to_transfer) Rupees to [7749378393@himal](recipient_upi)
+    - i would like to transfer money to [38474820@gpay](recipient_upi)
+    - i would like to transfer [50](amount_to_transfer) rupees to [3993834892@paytm](recipient_upi)
+    - i'd like to send rs. [40000](amount_to_transfer) to [Shrey@wolfbank](recipient_upi).
+    - i want to transfer rs. [100](amount_to_transfer) to [akshat@bank](recipient_upi)
+    - i want to transfer [4000](amount_to_transfer) to [vrushank@paytm](recipient_upi).
+    - transfer money to [satyam@hdfcbank](recipient_upi)
+    - transfer money to [sara@wolfbank](recipient_upi)
+
+- intent: ask_transfer_details
+  examples: |
+    - show me data
+    - show current status of transfer
+    - transfer details
+    - whom am i sending money?
+    - how much money am i sending?
+    - am i sending money?
+    - show transfer details
