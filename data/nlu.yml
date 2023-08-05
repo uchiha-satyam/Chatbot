@@ -104,6 +104,7 @@ nlu:
     - balle balle
     - sukhi
     - paryapt
+    - 😁
 
 - intent: mood_unhappy
   examples: |
@@ -135,6 +136,7 @@ nlu:
     - accha nhi tha
     - kharab
     - ganda
+    - 😔
 
 - intent: bot_challenge
   examples: |
@@ -175,6 +177,11 @@ nlu:
     - can i gift [himanshu](recipient_name) a [russian](random_object)?
     - can i gift [praphull](recipient_name)?
     - how many [bikes](random_object) can i afford?
+    - do i have [4359083] rupees in my account?
+    - do i have enough amount to spend rupees [234938]?
+    - can i spend rupees [25225]?
+    - could i spend rs. [542255]?
+    - i want to spend [85435] rupees
 
 - intent: check_logs
   examples: |
