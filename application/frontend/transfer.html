@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./styles/homepage.css">
+    <link rel="stylesheet" href="./styles/transfer.css">
+    <title>Transfer Money</title>
+</head> 
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="./chatbot.html">Home</a></li>
+                <li><a href="./transfer.html">Transfer</a></li> 
+                <li><a class="logoutButton">Logout</a></li> 
+            </ul>
+            <h1 class="bankLogo">Wolf Bank</h1>
+        </div>
+    </nav>
+
+    <div class="containerr">
+        
+        <div class="formbox">
+            <h1 class="pageTitle">Transfer</h1>
+            <form class="transfer">
+                <div class="field">
+                    <label for="toemail">Recipient's UPI ID:</label>
+                    <input type="text" class="textBox1" name = "toemail" placeholder="UPI ID" required>
+                </div>
+                <div class="field">
+                    <label for="amount">Amount:</label>
+                    <input type="string" class = 'textBox1' name="amount" placeholder="Amount" required>
+                </div>
+    
+                <div class="field">
+                    <input type="submit" id="formSubmit" value="transfer">
+                </div>
+                
+                
+                <div class="statusReporter"></div>  
+
+            </div>
+        </form>
+    </div>
+    
+</div>
+
+
+</body>
+
+<script src="./script/transfer.js"></script>
+</html>

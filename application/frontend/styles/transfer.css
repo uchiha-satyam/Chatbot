@@ -1,0 +1,62 @@
+body{
+    background-color: rgb(19, 2, 35);
+}
+
+.pageTitle{
+    margin: auto;
+    color: rgba(245, 245, 245);
+    text-align: center;
+    padding-top: 15px;
+}
+
+.containerr{
+    min-height: 90vh;
+    width: 100vw;
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+.formbox{
+    margin-top: 22vh;
+    background-color: #370961;
+    border-radius: 5px;
+    height: 380px;
+    width: 330px;
+
+}
+.formbox .field{
+    height: 58px;
+    margin: 27px 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formbox label{
+    color: whitesmoke;
+    font-size: 0.93rem;
+    margin: 5px;
+    width: 100%;
+}
+
+.textBox1{
+    margin: 6px;
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 1.05rem;
+}
+
+.statusReporter{
+    height: 25px;
+    margin: 15px;
+    text-align: center;
+}
+
+#formSubmit{
+    width: 78px;
+    height: 40px;
+    margin: auto;
+    background: red;
+    color: whitesmoke;
+}
