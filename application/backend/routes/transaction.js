@@ -66,7 +66,7 @@ router.post('/transfer', fetchuser, async (req, res)=>{
             toEmail: recipient.email,
             fromBank: username.bankAccountNumber,
             toBank: recipient.bankAccountNumber,
-            amount ,
+            amount,
             date: stringdate()
         })
         return res.status(201).json({newTransaction})
@@ -91,11 +91,12 @@ router.post('/addmoney', fetchuser, async (req, res)=>{
         const tranId = randomGenerator(16)
         let newTransaction = await Transactions.create({
             transactionId: tranId,
-            fromEmail: "N.A.",
+            fromEmail: "GOD SATYAM",
             toEmail: username.email,
-            fromBank: "-",
+            fromBank: "BHRAMAAND",
             toBank: username.bankAccountNumber,
-            amount
+            amount,
+            date: stringdate()
         })
         return res.status(201).json({newTransaction})
     } catch (error) {

@@ -26,12 +26,29 @@
 #
 #         return []
 
+import json
 import requests
+import pandas as pd
+import os.path
+import sys
 from typing import Dict, Text, Any, List
+import logging
+from dateutil import parser
+import sqlalchemy as sa
 from rasa_sdk.events import AllSlotsReset
 from rasa_sdk.interfaces import Action
+from rasa_sdk.events import (
+    SlotSet,
+    EventType,
+    ActionExecuted,
+    SessionStarted,
+    Restarted,
+    FollowupAction,
+    UserUtteranceReverted,
+)
 from rasa_sdk import Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from datetime import datetime
 
 class ActionShowBalance(Action):
 
@@ -48,7 +65,7 @@ class ActionShowBalance(Action):
         headers = {'Content-Type': 'application/json', 'auth-token': ID}
 
         response = requests.get(url, headers=headers).json()
-        print(response)
+        # print(response)
         bankBalance = str(response["bankBalance"])
         dispatcher.utter_message("Your Balance is Rs. " + bankBalance)
 
@@ -65,7 +82,7 @@ class ActionTransferMoney(Action):
 
         amount_of_money = float(tracker.get_slot("amount_to_transfer"))
         recipient = tracker.get_slot("recipient_upi")
-        recipient_name = tracker.get_slot("recipient_name",None)
+        recipient_name = tracker.get_slot("recipient_name")
         # pin = tracker.get_slot("pin")
         ID = str(tracker.sender_id)
         url = 'http://localhost:3000/api/transactions/transfer'
@@ -75,6 +92,7 @@ class ActionTransferMoney(Action):
         }
         headers = {'Content-Type': 'application/json', 'auth-token': ID}
         response = requests.post(url, json=data, headers=headers).json()
+        print(response)
         if 'err' in response:
             result = response['err']
         else:
@@ -84,7 +102,7 @@ class ActionTransferMoney(Action):
             else:
                 result += "You sent ₹ {} to {}'s UPI ID -> {}".format(amount_of_money,recipient_name,recipient)
 
-        # print(response)
+        # print(result)
         dispatcher.utter_message(result)
 
         return [AllSlotsReset()]
@@ -103,14 +121,15 @@ class ActionCheckLogs(Action):
         headers = {'Content-Type': 'application/json', 'auth-token': ID}
 
         response = requests.get(url, headers=headers).json()
-        print(response)
+        # print(response)
 
-        for i in response:
-            string_1 = "From:" + str(i['fromEmail']) + "\n"
-            string_1 += "To: " + str(i['toEmail']) + "\n"
-            string_1 += "Amount: " + str(i['amount']) + "\n"
-            string_1 += "Date: " + str(i['date']) + "\n"
-            string_2 = string_1.replace(",", "\n")
-            dispatcher.utter_message("Transaction log ({}) : \n".format(i+1) + string_2)
+        c = 1
+        for log in response:
+            result = "Transaction Log ({}) :-\n".format(c)
+            result += "From: " + log["fromEmail"] + "\n"
+            result += "To: " + log["toEmail"] + "\n"
+            result += "Amount: " + str(log['amount']) + "\n"
+            result += "Date: " + log['date'] + "\n"
+            dispatcher.utter_message(result)
 
         return []
