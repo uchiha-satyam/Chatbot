@@ -17,7 +17,40 @@ rules:
   - intent: ask_transfer_details
   - action: utter_transfer_details
 
-- rule: Transfer money
+- rule: Show balance
+  steps:
+  - intent: check_balance
+  - action: action_check_balance
+
+- rule: Show logs
+  steps:
+  - intent: check_logs
+  - action: action_check_logs
+
+- rule: Show help
+  steps:
+  - intent: ask_help
+  - action: utter_help
+
+- rule: Show charge
+  steps:
+  - intent: ask_charge
+  - action: utter_transfer_charge
+
+- rule: Initiate money transfer
   steps:
   - intent: transfer_money
-  - action: utter_transfer_details
+  - action: transfer_money_form
+  - active_loop: transfer_money_form
+
+- rule: Transfer money
+  condition:
+  - active_loop: transfer_money_form
+  steps:
+  - action: transfer_money_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_confirm_transfer
+  - intent: affirm
+  - action: action_transfer_money

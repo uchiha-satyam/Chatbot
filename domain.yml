@@ -12,8 +12,8 @@ intents:
   - check_logs
   - ask_help
   - ask_charge
-  - transfer_money
   - ask_transfer_details
+  - transfer_money
 
 entities:
   - amount_to_transfer
@@ -43,6 +43,12 @@ slots:
     - type: from_entity
       entity: recipient_upi
 
+forms:
+  transfer_money_form:
+    required_slots:
+      - amount_to_transfer
+      - recipient_upi
+
 actions:
   - action_check_balance
   - action_check_logs
@@ -50,129 +56,129 @@ actions:
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: Hey! How are you?
     buttons:
-    - title: "Great!"
-      payload: "Great!"
-    - title: "Not so great..."
-      payload: "Not so great..."
-  - text: "Hey! How you doing?"
+    - title: Great!
+      payload: Great!
+    - title: Not so great...
+      payload: Not so great...
+  - text: Hey! How you doing?
     buttons:
-    - title: "Wonderful!"
-      payload: "Wonderful!"
-    - title: "Not fine..."
-      payload: "Not fine..."
-  - text: "Howdy?"
+    - title: Wonderful!
+      payload: Wonderful!
+    - title: Not fine...
+      payload: Not fine...
+  - text: Howdy?
     buttons:
-    - title: "😁"
-      payload: "😁"
-    - title: "😔"
-      payload: "😔"
-  - text: "Hey sexy, what's up?"
-  - text: "Hey, how can I help?"
+    - title: 😁
+      payload: 😁
+    - title: 😔
+      payload: 😔
+  - text: Hey sexy, what's up?
+  - text: Hey, how can I help?
   - text: ""
-    image: "https://media.tenor.com/wiaZ6eyf11QAAAAM/hello-hi.gif"
+    image: https://media.tenor.com/wiaZ6eyf11QAAAAM/hello-hi.gif
   - text: ""
-    image: "https://i.pinimg.com/originals/5d/da/3c/5dda3c4ddd44be94ffb984f88e74e23b.gif"
+    image: https://i.pinimg.com/originals/5d/da/3c/5dda3c4ddd44be94ffb984f88e74e23b.gif
   - text: ""
-    image: "https://cdn.domestika.org/c_fill,dpr_auto,f_auto,q_auto,w_820/v1575047764/content-items/003/452/287/Knock_Knock-original.gif?1575047764"
+    image: https://cdn.domestika.org/c_fill,dpr_auto,f_auto,q_auto,w_820/v1575047764/content-items/003/452/287/Knock_Knock-original.gif?1575047764
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.pinimg.com/originals/45/d5/4c/45d54cfb929f9325d2888036d49387b9.gif"
-  - text: "Don't be sad.... 😙😙\nYou are amazing! 💪💪"
-  - text: "Cheer up sexy.. 😉😉"
-    image: "https://media3.giphy.com/media/dZWUtQ5y5AhXh7z9uO/giphy.gif?cid=6c09b952anmz4nikenpl1mhs6fhhn7eg9tc5fl5czcbx6p6g&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g"
+  - text: Here is something to cheer you up...
+    image: https://i.pinimg.com/originals/45/d5/4c/45d54cfb929f9325d2888036d49387b9.gif
+  - text: Don't be sad.... 😙😙\nYou are amazing! 💪💪
+  - text: Cheer up sexy.. 😉😉
+    image: https://media3.giphy.com/media/dZWUtQ5y5AhXh7z9uO/giphy.gif?cid=6c09b952anmz4nikenpl1mhs6fhhn7eg9tc5fl5czcbx6p6g&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g
 
   utter_did_that_help:
-  - text: "Did that help you?"
-  - text: "Did I help?"
-  - text: "Did that work?"
-  - text: "Did that magic work?"
+  - text: Did that help you?
+  - text: Did I help?
+  - text: Did that work?
+  - text: Did that magic work?
 
   utter_happy:
-  - text: "Great, carry on!"
-    image: "https://media.tenor.com/i6ZydtpnJEAAAAAM/happy.gif"
-  - text: "That's great!"
-    image: "https://media.tenor.com/38kG60-fNSIAAAAM/budding-pop-cute.gif"
-  - text: "That makes me happy... 😄😄"
-    image: "https://www.icegif.com/wp-content/uploads/happy-festivus-icegif-31.gif"
-  - text: "You happy, me happy 😉"
-    image: "https://media.tenor.com/ykyGcqDZJWAAAAAM/dance-happy.gif"
-  - text: "Nice hearing that!"
-    image: "https://www.icegif.com/wp-content/uploads/icegif-5860.gif"
+  - text: Great, carry on!
+    image: https://media.tenor.com/i6ZydtpnJEAAAAAM/happy.gif
+  - text: That's great!
+    image: https://media.tenor.com/38kG60-fNSIAAAAM/budding-pop-cute.gif
+  - text: That makes me happy... 😄😄
+    image: https://www.icegif.com/wp-content/uploads/happy-festivus-icegif-31.gif
+  - text: You happy, me happy 😉
+    image: https://media.tenor.com/ykyGcqDZJWAAAAAM/dance-happy.gif
+  - text: Nice hearing that!
+    image: https://www.icegif.com/wp-content/uploads/icegif-5860.gif
 
   utter_goodbye:
-  - text: "Bye"
-    image: "https://i.gifer.com/4V0f.gif"
-  - text: "See you around..."
-  - text: "Bye-Bye 👋👋"
-  - text: "🙋‍♂️🙋‍♂️"
-    image: "https://gifdb.com/images/high/bob-minion-bye-bye-wvq1ppzf4iv2ubmz.gif"
-  - text: "It was a pleasure to help you"
-  - text: "Come again whenever you need help 😺"
-    image: "https://www.icegif.com/wp-content/uploads/adios-icegif-5.gif"
-  - text: "Till next time ... 😙"
-    image: "https://gifdb.com/images/high/cute-cartoon-bye-hy07o4c8l7tczqru.gif"
+  - text: Bye
+    image: https://i.gifer.com/4V0f.gif
+  - text: See you around...
+  - text: Bye-Bye 👋👋
+  - text: 🙋‍♂️🙋‍♂️
+    image: https://gifdb.com/images/high/bob-minion-bye-bye-wvq1ppzf4iv2ubmz.gif
+  - text: It was a pleasure to help you
+  - text: Come again whenever you need help 😺
+    image: https://www.icegif.com/wp-content/uploads/adios-icegif-5.gif
+  - text: Till next time ... 😙
+    image: https://gifdb.com/images/high/cute-cartoon-bye-hy07o4c8l7tczqru.gif
   - text: ""
-    image: "https://i.pinimg.com/originals/2a/27/b5/2a27b518b33f15d36624def88d4a67fc.gif"
+    image: https://i.pinimg.com/originals/2a/27/b5/2a27b518b33f15d36624def88d4a67fc.gif
   - text: ""
-    image: "https://gifdb.com/images/high/bob-minion-bye-bye-wvq1ppzf4iv2ubmz.gif"
+    image: https://gifdb.com/images/high/bob-minion-bye-bye-wvq1ppzf4iv2ubmz.gif
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa and trained by Satyam Abhishek."
-    image: "https://thumbs.gfycat.com/RealSecondhandIndochinahogdeer-size_restricted.gif"
-  - text: "I am a happy bot designed to help you."
-    image: "https://cdn.domestika.org/c_fill,dpr_auto,f_auto,q_auto,w_820/v1575047764/content-items/003/452/287/Knock_Knock-original.gif?1575047764"
-  - text: "I trained hard ⚒️⚒️ so that I can make your work easy 😘"
-    image: "https://media.tenor.com/UePrn55eACwAAAAM/cat-exercise.gif"
+  - text: I am a bot, powered by Rasa and trained by Satyam Abhishek.
+    image: https://thumbs.gfycat.com/RealSecondhandIndochinahogdeer-size_restricted.gif
+  - text: I am a happy bot designed to help you.
+    image: https://cdn.domestika.org/c_fill,dpr_auto,f_auto,q_auto,w_820/v1575047764/content-items/003/452/287/Knock_Knock-original.gif?1575047764
+  - text: I trained hard ⚒️⚒️ so that I can make your work easy 😘
+    image: https://media.tenor.com/UePrn55eACwAAAAM/cat-exercise.gif
 
   utter_transfer_details:
-  - text: "You want to transfer {amount_to_transfer} rupees to {recipient_name}'s upi id -> {recipient_upi}"
+  - text: You want to transfer {amount_to_transfer} rupees to {recipient_name}'s upi id -> {recipient_upi}
 
-  utter_ask_amount:
-  - text: "How much money do you wish to transfer?"
-  - text: "What's the amount that you want to send?"
-  - text: "Tell me the amount that you wish to transfer."
-  - text: "I did not know the transfer amount. Could you provide this information?"
-  - text: "I would like to know the amount of money that you wish to transfer?"
-  - text: "How much money do you wish to transfer to {recipient_name}'s account?"
-  - text: "How much should I send to {recipient_name}?"
-  - text: "How much money do you wish to transfer to {recipient_upi}?"
-  - text: "How much should I send to {recipient_upi}?"
+  utter_ask_amount_to_transfer:
+  - text: How much money do you wish to transfer?
+  - text: What's the amount that you want to send?
+  - text: Tell me the amount that you wish to transfer.
+  - text: I did not know the transfer amount. Could you provide this information?
+  - text: I would like to know the amount of money that you wish to transfer?
+  - text: How much money do you wish to transfer to {recipient_name}'s account?
+  - text: How much should I send to {recipient_name}?
+  - text: How much money do you wish to transfer to {recipient_upi}?
+  - text: How much should I send to {recipient_upi}?
 
-  utter_ask_upi:
-  - text: "Please provide the UPI ID of recipient."
-  - text: "I did not get recipient's UPI ID. Could you provide that?"
-  - text: "Enter UPI ID of reciever."
-  - text: "Enter reciever's UPI ID"
-  - text: "Could you provide {recipient_name}'s UPI ID?"
-  - text: "I would require {recipient_name}'s UPI ID to transfer amount"
-  - text: "Sorry 🥲, I don't have {recipient_name}'s UPI ID. Could you tell me that?"
-  - text: "Could you tell me {recipient_name}'s UPI ID"
+  utter_ask_recipient_upi:
+  - text: Please provide the UPI ID of recipient.
+  - text: I did not get recipient's UPI ID. Could you provide that?
+  - text: Enter UPI ID of reciever.
+  - text: Enter reciever's UPI ID
+  - text: Could you provide {recipient_name}'s UPI ID?
+  - text: I would require {recipient_name}'s UPI ID to transfer amount
+  - text: Sorry 🥲, I don't have {recipient_name}'s UPI ID. Could you tell me that?
+  - text: Could you tell me {recipient_name}'s UPI ID
 
   utter_confirm_transfer:
-  - text: "You are going to transfer Rs. {amout_to_transfer} to {recipient_name}'s account ({recipient_upi}). Do you confirm?"
-  - text: "Do you confirm transfer of Rs. {amout_to_transfer} to {recipient_name}'s account ({recipient_upi})?"
-  - text: "Are you sure to send Rs. {amout_to_transfer} to {recipient_name}'s account ({recipient_upi})?"
-  - text: "Should I finally send Rs. {amout_to_transfer} to {recipient_name}'s account ({recipient_upi})?"
-  - text: "Please confirm whether I should transfer Rs. {amout_to_transfer} to {recipient_name}'s account ({recipient_upi})?"
-  - text: "You are going to transfer Rs. {amout_to_transfer} to {recipient_upi}. Do you confirm?"
-  - text: "Do you confirm transfer of Rs. {amout_to_transfer} to {recipient_upi}?"
-  - text: "Are you sure to send Rs. {amout_to_transfer} to {recipient_upi}?"
-  - text: "Should I finally send Rs. {amout_to_transfer} to {recipient_upi}?"
-  - text: "Please confirm whether I should transfer Rs. {amout_to_transfer} to {recipient_upi}?"
+  - text: You are going to transfer Rs. {amount_to_transfer} to {recipient_name}'s account ({recipient_upi}). Do you confirm?
+  - text: Do you confirm transfer of Rs. {amount_to_transfer} to {recipient_name}'s account ({recipient_upi})?
+  - text: Are you sure to send Rs. {amount_to_transfer} to {recipient_name}'s account ({recipient_upi})?
+  - text: Should I finally send Rs. {amount_to_transfer} to {recipient_name}'s account ({recipient_upi})?
+  - text: Please confirm whether I should transfer Rs. {amount_to_transfer} to {recipient_name}'s account ({recipient_upi})?
+  - text: You are going to transfer Rs. {amount_to_transfer} to {recipient_upi}. Do you confirm?
+  - text: Do you confirm transfer of Rs. {amount_to_transfer} to {recipient_upi}?
+  - text: Are you sure to send Rs. {amount_to_transfer} to {recipient_upi}?
+  - text: Should I finally send Rs. {amount_to_transfer} to {recipient_upi}?
+  - text: Please confirm whether I should transfer Rs. {amount_to_transfer} to {recipient_upi}?
 
   utter_help:
-  - text: "I can help 😌 you with financial queries. You can ask things like:\n 💁‍♀️ What's my account balance?\n 💁‍♀️ Can you transfer money?\n 💁‍♀️ Show me my transaction history.\n and much more... 😉😉"
-    image: "https://media.tenor.com/UePrn55eACwAAAAM/cat-exercise.gif"
+  - text: I can help 😌 you with financial queries. You can ask things like:\n 💁‍♀️ What's my account balance?\n 💁‍♀️ Can you transfer money?\n 💁‍♀️ Show me my transaction history.\n and much more... 😉😉
+    image: https://media.tenor.com/UePrn55eACwAAAAM/cat-exercise.gif
 
   utter_transfer_charge:
-  - text: "No, you will not be charged for any transactions you do through me 😉."
-  - text: "You won't be charged any extra amount for any transaction 😉."
-  - text: "I would not charge you anything extra 😉."
-  - text: "I am a free helper 😁, so I won't be charging anything 😉."
-  - text: "Helping you make me happy 😁. That is enough for me 😉."
+  - text: No, you will not be charged for any transactions you do through me 😉.
+  - text: You won't be charged any extra amount for any transaction 😉.
+  - text: I would not charge you anything extra 😉.
+  - text: I am a free helper 😁, so I won't be charging anything 😉.
+  - text: Helping you make me happy 😁. That is enough for me 😉.
 
 session_config:
   session_expiration_time: 60
