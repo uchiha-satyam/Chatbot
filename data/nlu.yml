@@ -85,6 +85,8 @@ nlu:
     - wonderful
     - i am feeling very good
     - i am great
+    - great!
+    - wonderful!
     - i am amazing
     - i am going to save the world
     - super stoked
@@ -123,6 +125,12 @@ nlu:
     - so saad
     - so sad
     - not happy
+    - not so great...
+    - not great
+    - not fantastic
+    - not going good
+    - not good
+    - not fine
     - rough
     - plain
     - simple

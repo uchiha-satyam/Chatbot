@@ -20,7 +20,7 @@ logoutBtn.addEventListener('click', (e)=>{
 
 const setStatus = async (status, msg) =>{
     statusReporter.innerHTML = msg
-    statusReporter.style.color = (status=='error'?"#ff3636": "#31f351")
+    statusReporter.style.color = (status==='error'?"#ff3636": "#31f351")
     setTimeout(()=>{
         statusReporter.innerHTML = ""
     }, 3500)

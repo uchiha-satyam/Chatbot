@@ -1,5 +1,10 @@
 import axios from "axios";
 
+const config = {
+  'Access-Control-Allow-Origin': '*',
+  'Content-Type': 'application/json'
+}
+
 export const createUserMessage = (message) => {
   return {
     text: message,
@@ -23,8 +28,8 @@ export const getBotResponse = async ({
         sender,
         message,
         metadata,
-      },
-    });
+      }
+    },config);
     return response.data;
   } catch (error) {
     console.log("error occurred fetching bot response", error);

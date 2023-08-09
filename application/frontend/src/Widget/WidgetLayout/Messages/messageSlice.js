@@ -82,6 +82,7 @@ export const messagesSlice = createSlice({
       state.userTyping = true;
       state.userTypingPlaceholder = "Type your message here...";
       const messages = action.payload;
+      // console.log(messages);
       if (messages.length > 0) {
         for (let index = 0; index < messages.length; index += 1) {
           const message = messages[index];
