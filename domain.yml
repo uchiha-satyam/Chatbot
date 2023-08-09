@@ -32,13 +32,13 @@ slots:
         - ask_charge
 
   recipient_name:
-    type: text
+    type: any
     mappings:
     - type: from_entity
       entity: recipient_name
 
   recipient_upi:
-    type: text
+    type: any
     mappings:
     - type: from_entity
       entity: recipient_upi

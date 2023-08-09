@@ -16,10 +16,6 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-    - what's up
-    - namaste
-    - aur bidu
-    - kya haal chaal
     - everything good ?
     - nice going
     - well well
@@ -40,7 +36,6 @@ nlu:
     - bye handsome
     - till then
     - next time
-    - baad me milte hai
 
 - intent: affirm
   examples: |
@@ -50,14 +45,10 @@ nlu:
     - of course
     - that sounds good
     - correct
-    - haa
-    - sahi bole
-    - shi guru
     - okay
     - oks
     - ok
     - yup
-    - yohohoho yo ho hoho
 
 - intent: deny
   examples: |
@@ -68,9 +59,6 @@ nlu:
     - don't like that
     - no way
     - not really
-    - naa
-    - nahi bhai
-    - bilkul nhi
     - not that
     - it was something else
     - nah
@@ -100,12 +88,6 @@ nlu:
     - life's good
     - life is going the way it should be
     - dope
-    - accha tha
-    - badhiya
-    - oo changa jii changa
-    - balle balle
-    - sukhi
-    - paryapt
     - 😁
 
 - intent: mood_unhappy
@@ -139,11 +121,6 @@ nlu:
     - lazy
     - tired
     - tiresome
-    - dukhi
-    - bura lag raha
-    - accha nhi tha
-    - kharab
-    - ganda
     - 😔
 
 - intent: bot_challenge
@@ -156,8 +133,6 @@ nlu:
     - who am i talking to?
     - bot?
     - human?
-    - tu hai kon be
-    - robot hai kya?
 
 - intent: check_balance
   examples: |
@@ -185,11 +160,6 @@ nlu:
     - can i gift [himanshu](recipient_name) a [russian](random_object)?
     - can i gift [praphull](recipient_name)?
     - how many [bikes](random_object) can i afford?
-    - do i have [4359083] rupees in my account?
-    - do i have enough amount to spend rupees [234938]?
-    - can i spend rupees [25225]?
-    - could i spend rs. [542255]?
-    - i want to spend [85435] rupees
 
 - intent: check_logs
   examples: |
@@ -278,7 +248,7 @@ nlu:
     - i need to pay a friend.
     - can i transfer money to a friend?
     - i want to pay [himanshu](recipient_name)
-    - i want to transfer rs. [100](amount_to_transfer) to [himanshu](recipient_name).
+    - i want to transfer [100](amount_to_transfer) to [himanshu](recipient_name).
     - can i transfer money to [praphull](recipient_name)
     - can i transfer money to my [girlfriend](recipient_name)
     - i want to pay [jatav](recipient_name)
@@ -289,11 +259,11 @@ nlu:
     - pay [nikita](recipient_name)
     - pay [vedha](recipient_name) please
     - can i transfer money to [priyansh](recipient_name)?
-    - pay [satyam](recipient_name) [60](amount_to_transfer) rs.
+    - pay [satyam](recipient_name) [60](amount_to_transfer)
     - pay [praphull](recipient_name) rs. [60](amount_to_transfer)
-    - transfer rs. [60](amount_to_transfer) to [prashant](recipient_name)
+    - transfer [60](amount_to_transfer) to [prashant](recipient_name)
     - pay [satyam](recipient_name) rs [50000](amount_to_transfer).
-    - pay rs. [500000](amount_to_transfer) to [vedha](recipient_name)
+    - pay [500000](amount_to_transfer) to [vedha](recipient_name)
     - ok pay [prashant](recipient_name)
     - pay [himanshu](recipient_name)
     - i want to transfer rs. [100](amount_to_transfer) to my [daughter](recipient_name)
@@ -314,13 +284,13 @@ nlu:
     - i want to transfer rs. [100](amount_to_transfer) to [prashant@ybl](recipient_upi)
     - i want to pay [satyam@hdfc](recipient_upi)
     - pay [nikita@icici](recipient_upi) rs. [40](amount_to_transfer) please
-    - transfer rs. [60](amount_to_transfer) to [vedha@gpay](recipient_upi)
+    - transfer [60](amount_to_transfer) to [vedha@gpay](recipient_upi)
     - pay [nikita@icici](recipient_upi)
     - pay [vedha@gpay](recipient_upi) please
     - can i transfer money to [priyansh@nokia](recipient_upi)?
     - pay [satyam@hdfc](recipient_upi) [60](amount_to_transfer) rs.
     - pay [praphull@pnb](recipient_upi) rs. [60](amount_to_transfer)
-    - transfer rs. [60](amount_to_transfer) to [prashant@ybl](recipient_upi)
+    - transfer [60](amount_to_transfer) to [prashant@ybl](recipient_upi)
     - pay [satyam@hdfc](recipient_upi) rs [50000](amount_to_transfer).
     - pay rs. [500000](amount_to_transfer) to [vedha@gpay](recipient_upi)
     - ok pay [prashant@ybl](recipient_upi)
@@ -329,13 +299,13 @@ nlu:
     - i need to make an urgent transfer to [himanshu@oksbi](recipient_upi), can you do it?
     - ahh, okay so i want to make a transfer to [navvay@cpay](recipient_upi).
     - i need to transfer money to [prakhar@api](recipient_upi), my son
-    - send rs [50](amount_to_transfer) to [dommeti@yaml](recipient_upi)
+    - send [50](amount_to_transfer) to [dommeti@yaml](recipient_upi)
     - hi i like to send money to [4492939@cmlam](recipient_upi)
     - please transfer [50](amount_to_transfer) Rupees to [7749378393@himal](recipient_upi)
     - i would like to transfer money to [38474820@gpay](recipient_upi)
     - i would like to transfer [50](amount_to_transfer) rupees to [3993834892@paytm](recipient_upi)
-    - i'd like to send rs. [40000](amount_to_transfer) to [Shrey@wolfbank](recipient_upi).
-    - i want to transfer rs. [100](amount_to_transfer) to [akshat@bank](recipient_upi)
+    - i'd like to send [40000](amount_to_transfer) to [Shrey@wolfbank](recipient_upi).
+    - i want to transfer [100](amount_to_transfer) to [akshat@bank](recipient_upi)
     - i want to transfer [4000](amount_to_transfer) to [vrushank@paytm](recipient_upi).
     - transfer money to [satyam@hdfcbank](recipient_upi)
     - transfer money to [sara@wolfbank](recipient_upi)

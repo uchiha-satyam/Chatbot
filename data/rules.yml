@@ -16,3 +16,8 @@ rules:
   steps:
   - intent: ask_transfer_details
   - action: utter_transfer_details
+
+- rule: Transfer money
+  steps:
+  - intent: transfer_money
+  - action: utter_transfer_details
