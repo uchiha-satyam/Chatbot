@@ -24,8 +24,7 @@ For cloning this project you require the following:
 * **Node.js** (Install from website)
 * **nodemon** (Install using ```npm install -g nodemon```)
 * Activate virutal environment using: ```.\myenv\Scripts\activate```
-* **rasa[spacy]** (Install using ```pip install rasa[spacy]```)
-* **rasa-sdk** (Install using ```pip install rasa-sdk```)
+* You will also need all the python modules listed in **./requirements.txt**. You can install all of them by running: ```pip install -r ./requirements.txt```
 * You will need access to a MongoDB Atlas database for storing user data. Fill appropriate details in the **./application/backend/sample.env** file and then rename it to **.env**
 
 To install dependencies & train rasa model follow the given steps:

@@ -1,0 +1,7 @@
+rasa[spacy]
+rasa-sdk
+python-dateutil
+numpy
+pytz~=2019.3
+ruamel.yaml
+sqlalchemy
