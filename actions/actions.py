@@ -130,6 +130,7 @@ class ActionCheckLogs(Action):
             result += "To: " + log["toEmail"] + "\n"
             result += "Amount: " + str(log['amount']) + "\n"
             result += "Date: " + log['date'] + "\n"
+            c = c+1
             dispatcher.utter_message(result)
 
         return []
